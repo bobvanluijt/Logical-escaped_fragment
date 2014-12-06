@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="fragment" content="!">
-<title>This is a test for SEO and AJAX</title>
+<title>This is a test for SEO and AJAX - url1</title>
 </head>
 
 <body>
-
 <p>We all know AJAX websites, but tell me, how should a website like this look with AJAX content in it?</p>
 <p>To find this out you can add the hastag with showMeData and some date, this will be shown at the bottom of this page as header one.</p>
 <p class="whatDidYouFind"></p>
@@ -21,7 +20,7 @@
 <script>
 function __init(e){
 	var value1 = getHashtagParameterByName('value1');    
-    $('.whatDidYouFind').html('<h1>The output of value1 = '+value1+'</h1>');
+    $('.whatDidYouFind').html('<h1>I\'m url1 and the val of value1 = '+value1+'</h1>');
 	
 	var values = getHashtagParameterByName();
 	for(var key in values) {
