@@ -5,7 +5,7 @@ Logical escaped_fragment for SEO and UX
 This code is created to help you create heavy based AJAX pages, that Google can crawl.
 
 Based on: https://developers.google.com/webmasters/ajax-crawling/<br>
-Based on: Google executes `$(document).ready()` or any equivalent.<br>
+Based on: fact that Google executes `$(document).ready()` or any equivalent DOM ready loader.<br>
 <i>Note: This solution is 100% JS. It doesn't need a lib like jQuery</i><br>
 
 [text]
