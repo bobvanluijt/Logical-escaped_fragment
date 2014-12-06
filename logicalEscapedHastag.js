@@ -8,8 +8,8 @@
                                                   |___/ |___/ 
 
     SEO, excaped fragment and user interaction solution by Bob van Luijt (Kubrickology)
-    Read the README.MD for more info:    http:
-    Github:                                http
+    Read the README.MD for more info: http: https://github.com/kubrickology/Logical-escaped_fragment/blob/master/README.md
+    Github: http: https://github.com/kubrickology/Logical-escaped_fragment/
                                                                   */
 
 function getHashtagParameterByName(i){
@@ -19,6 +19,7 @@ function getHashtagParameterByName(i){
     var returner;
     var results;
     var findEscapedElement;
+	var regex;
     i = typeof i !== 'undefined' ? i : false;
     if(i!==false){
         i = i.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -29,8 +30,8 @@ function getHashtagParameterByName(i){
         // Search for the escaped element hastag
         //
             esc      = '_escaped_fragment_';
-        var regex    = new RegExp("[\\?]"+esc+"=([^#]*)"),
-                       results = regex.exec(location.search);
+            regex    = new RegExp("[\\?]"+esc+"=([^#]*)");
+            results = regex.exec(location.search);
             results  = results[1].split("&");
             returner = new Array();
             results.forEach(function(entry) {
@@ -46,8 +47,8 @@ function getHashtagParameterByName(i){
         //
         // Search for the hastag
         //
-        var regex      = new RegExp("[\\#!/&]"+i+"=([^&#]*)"),
-            results = regex.exec(location.hash);
+            regex      = new RegExp("[\\#!/&]"+i+"=([^&#]*)");
+            results    = regex.exec(location.hash);
             if(i===false){
                 results = location.hash.replace("#!","");
                 results = results.split("&");
