@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="fragment" content="!">
+<title>This is a test for SEO and AJAX</title>
+</head>
+
+<body>
+
+<p>We all know AJAX websites, but tell me, how should a website like this look with AJAX content in it?</p>
+<p>To find this out you can add the hastag with showMeData and some date, this will be shown at the bottom of this page as header one.</p>
+<p class="whatDidYouFind"></p>
+<p>You can also browse for an array of information:</p>
+<p class="whatValuesDidYouFind"></p>
+<p class="someUrl">When you click <a href="url1.html#!value1=123&value2=456" target="_self">here</a>, the url will change to other values</p>
+<p class="someUrl">When you click <a href="url2.html#!value1=somethingCompletelyDifferent" target="_self">here</a>, the hastag will change and so is the content, Google will index both.</p>
+<p>The big difference between the __init() and __update() function is that __init() is by defenition indexed by Google, __update() not. However, if you call __init() in the __update() function, you know you're always safe.</p>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="./logicalEscapedHastag.js"></script>
+<script>
+function __init(e){
+	var value1 = getHashtagParameterByName('value1');    
+    $('.whatDidYouFind').html('<h1>The output of value1 = '+value1+'</h1>');
+	
+	var values = getHashtagParameterByName();
+	for(var key in values) {
+		$('.whatValuesDidYouFind').append('<h3>key name = '+key+' | value name = '+values[key]+'</h3>');
+	}
+}
+
+function __update(e){
+	$('.whatValuesDidYouFind').html('');
+	__init(e);
+}
+</script>
+</body>
+</html>
